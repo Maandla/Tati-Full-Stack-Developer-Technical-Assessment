@@ -1,10 +1,25 @@
-<?xml version="1.0" ?>
-<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap-env:Body>
-    <ns0:confirmMeterReq xmlns:ns0="http://www.nrs.eskom.co.za/xmlvend/meter/2.1/schema">
-      <ns0:idMethod>
-        <ns4:meterIdentifier xmlns:ns4="http://www.nrs.eskom.co.za/xmlvend/base/2.1/schema" msno="01234567891"/>
-      </ns0:idMethod>
-    </ns0:confirmMeterReq>
-  </soap-env:Body>
-</soap-env:Envelope>
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>010038 Meter information not found</faultstring>
+      <faultactor>http://onlinevending.eskom.co.za/OVS/WS/Actaris.WSNRS21EskomFull/WSActaris.asmx</faultactor>
+      <detail>
+        <b0:xmlvendFaultResp xmlns:r0="http://www.nrs.eskom.co.za/xmlvend/revenue/2.1/schema" xmlns:b0="http://www.nrs.eskom.co.za/xmlvend/base/2.1/schema">
+          <b0:clientID xmlns:d3p1="http://www.w3.org/2001/XMLSchema-instance" d3p1:type="b0:GenericDeviceID" id="6004708000090"/>
+          <b0:serverID xmlns:d3p1="http://www.w3.org/2001/XMLSchema-instance" d3p1:type="b0:EANDeviceID" ean="0123123456789"/>
+          <b0:terminalID xmlns:d3p1="http://www.w3.org/2001/XMLSchema-instance" d3p1:type="b0:GenericDeviceID" id="6004708000090"/>
+          <b0:reqMsgID dateTime="22222222222222222" uniqueNumber="2222222"/>
+          <b0:respDateTime>2025-07-08T16:55:55.739+02:00</b0:respDateTime>
+          <b0:dispHeader>ONLINE ERROR</b0:dispHeader>
+          <b0:operatorMsg>Meter information not found,cannot process request. Contact Eskom to register meter</b0:operatorMsg>
+          <b0:custMsg>Meter not found.Contact Eskom to register meter</b0:custMsg>
+          <b0:fault xmlns:d3p1="http://www.w3.org/2001/XMLSchema-instance" d3p1:type="b0:UnknownMeterEx">
+            <b0:desc>010038 Meter information not found</b0:desc>
+          </b0:fault>
+        </b0:xmlvendFaultResp>
+      </detail>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>
