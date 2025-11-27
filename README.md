@@ -21,7 +21,6 @@ http://127.0.0.1:8000/meter/confirm/
 ________________________________________
 Testing the Service
 Each test case is included in sample_request/ and tests/. or use test_app.py
-You can test with curl or PowerShell.
 ________________________________________
 TEST CASES (REQUIRED BY THE ASSESSMENT)
 1️⃣ msno="01234567890" — Successful Response

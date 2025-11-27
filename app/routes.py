@@ -11,7 +11,7 @@ def confirm_meter():
         html = """
         <h2>Meter is Running</h2>
         <p>This endpoint only accepts <strong>POST</strong> requests with SOAP/XML payloads.</p>
-        <p>Use a test.py.</p>
+      
         """
         return Response(html, mimetype="text/html", status=200)
 
